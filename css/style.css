@@ -1,0 +1,374 @@
+/*csslint order-alphabetical:false,outline-none:false, universal-selector:false, box-model:false, qualified-headings: false, unique-headings:false, box-sizing:false, fallback-colors:false compatible-vendor-prefixes:false*/
+
+/*
+========================================================
+    BROWSER RESET - gebaseerd op html5 doctor css reset
+     http://html5doctor.com/html-5-reset-stylesheet
+========================================================
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}
+nav ul{list-style:none}
+ul{margin-left:1.1em;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+*,*:before,*:after{box-sizing: border-box;}
+/*     EINDE BROWSER RESET */
+
+
+/* achtergrond */
+
+.airport {
+    background-image: url(../images/airport.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.strand {
+    background-image: url(../images/strand.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+/* buttons */
+
+.nsyellow {
+    background-color: #FECA00;
+    border-style: none;
+    margin: 3px;
+    box-shadow: inset 0 -0.2em 0 #CFA400;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #002C89;
+    font-weight: 500;
+}
+
+.nsyellow:active,
+.nsyellow:hover {
+    background-color: #CFA400;
+    border-style: none;
+    transition: .15s ease-in-out;
+}
+
+.nsblue {
+    margin: 1em 0 1em 0;
+    padding-left: 1em;
+    width: 12em;
+    height: 3em;
+    background-color: #0078DA;
+    border-style: none;
+    text-align: left;
+    box-shadow: inset 0 -0.2em 0 #005BA5;
+    color: white;
+}
+
+.nsblue:after {
+    content: ">";
+    padding-left: 1em;
+}
+
+.nsblue:hover {
+    background-color: #005BA5;
+    transition: .15s ease-in-out;
+}
+
+.fbblue {
+    margin: 1em 0 1em 0;
+    padding-left: 1em;
+    width: 12em;
+    height: 3em;
+    background-color: #3A589D;
+    border-style: none;
+    text-align: left;
+    box-shadow: inset 0 -0.2em 0 #26417F;
+    color: white;
+}
+
+.fbblue:hover {
+    background-color: #26417F;
+    transition: .15s ease-in-out;
+}
+
+.toevoegen,
+.verwijderen {
+    margin-top: 1em;
+    float: right;
+    display: block;
+    margin-left: 1.5em;
+    width: 25px;
+    height: 20px;
+    background-image: url(../images/eye-black.svg);
+    background-repeat: no-repeat;
+    background-color: white;
+    border-style: none;
+}
+
+.verwijderen {
+    background-image: url(../images/close.svg);
+    margin-top: -3em;
+}
+
+/* filter en sorteren */
+
+aside {
+    padding: 0 2em 2em;
+    background-color: #FECA00;
+    background-repeat: no-repeat;
+}
+
+progress {
+    width: 100%;
+}
+
+
+/* typografie */
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+p,
+a,
+.nsblue,
+.nsyellow,
+.fbblue {
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+h1,
+legend {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    color: #002C89;
+}
+
+a {
+    color: #002C89;
+}
+
+.lees {
+    color: #0078DA;
+    vertical-align: bottom;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+/* header */
+
+header {
+    display: flex;
+    padding: 1.5em;
+    background-color: white;
+    flex-direction: row;
+    box-shadow: inset 0 -0.2em 0 #c0c0c0;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* navigatie */
+
+nav {
+    flex-grow: 1;
+}
+
+
+li {
+    padding-right: 1em;
+}
+
+.searchicon {
+    margin: -0.5em 0.5em 0 0;
+}
+
+
+/* main, section en article */
+
+article {
+    background-color: white;
+    box-shadow: inset 0 -0.2em 0 #c0c0c0;
+}
+
+main {
+    padding: 2em;
+    background-color: #e6e6e9;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+section > article {
+    margin: 1.5em 1.5em 1.5em 0;
+}
+
+section > article .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+    font-size: 0.8em;
+    color: grey;
+}
+
+.lees:before {
+    content: ">";
+    padding-right: 1.2em;
+}
+
+.afbartikel {
+    width: 100%;
+    margin-bottom: -1em;
+}
+
+.marge {
+    padding: 1.5em 1.5em;
+}
+
+.pgnr {
+    padding-left: 1em;
+}
+
+/* registreren */
+
+.airport > section {
+    margin-top: 5.8em;
+    justify-content: center;
+}
+
+.inloggen,
+.registreren {
+    display: block;
+}
+
+.inloggen,
+.registreren {
+    width: 30em;
+    margin-right: 2em;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.inloggen > fieldset {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.registreren > fieldset {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+fieldset {
+    padding-bottom: 2em;
+}
+
+input {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+/* zoeken, filteren, sorteren en inloggen*/
+
+form {
+    display: flex;
+}
+
+label {
+    margin-top: 1em;
+}
+
+/* media queries mobiel */
+
+@media (max-width:35em) {
+    aside > section > article:nth-child(3) {
+        display: none;
+    }
+    aside > section > article:nth-child(2) {
+        display: none;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    article {
+        width: 100%;
+    }
+
+    .zoeken {
+        margin-top: 1em;
+        width: 100%;
+    }
+    .sorteren {
+        display: none;
+    }
+    .nsyellow {
+        width: 21.5%;
+        height: 60px;
+    }
+    .searchicon {
+        display: none;
+    }
+
+    .logo {
+        margin-bottom: 1em;
+    }
+
+}
+
+@media (min-width:35em) {
+    article {
+        width: 45%;
+    }
+    .sorteren {
+        margin-left: auto;
+        margin-right: 5em;
+    }
+    .nsyellow {
+        width: 73px;
+        height: 60px;
+    }
+}
+
+@media (max-width:60em) {
+    aside > section > article:nth-child(3) {
+        display: none;
+    }
+    .sorteren {
+        display: none;
+    }
+}
+
+
+/* media queries tablet */
+
+@media (min-width:60em) {
+    article {
+        width: 30%;
+    }
+}
+
+
+/* media queries desktop */
+
+@media (min-width:80em) {
+    article {
+        width: 23%;
+    }
+}
+

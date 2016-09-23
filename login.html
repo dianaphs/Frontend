@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/ns.svg" alt="logo" class=logo>
+
+        <nav>
+            <ul>
+                <li><a href="#.html">home</a></li>
+                <li><a href="verhalen.html">verhalen</a></li>
+                <li><a href="#.html">over ons</a></li>
+                <li><a href="login.html" class="current">inloggen</a></li>
+            </ul>
+        </nav>
+
+         <form>
+            <img src="images/search.svg" alt="searchicon" class="searchicon">
+            <input type="search" class="zoeken" placeholder="zoeken">
+        </form>
+    </header>
+
+    <main class="airport">
+        <section>
+            <form class="inloggen">
+                <fieldset>
+                    <legend>Inloggen</legend>
+                    <label for="gebruikersnaam">Gebruikersnaam</label>
+                    <input type="text" name="gebruikersnaam" id="gebruikersnaam">
+
+                    <label for="wachtwoord">Wachtwoord</label>
+                    <input type="password" name="wachtwoord" id="wachtwoord">
+
+                    <button type="button" class="nsblue"> Aanmelden</button>
+
+                    <a href="#" class="lees">wachtwoord vergeten</a>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Inloggen via Facebook</legend>
+                    <button type="button" class="fbblue"> Aanmelden via fb</button>
+                </fieldset>
+
+
+            </form>
+
+            <form class="registreren">
+                <fieldset>
+                    <legend>Ik heb nog geen account</legend>
+
+                    <label for="naam">Naam</label>
+                    <input type="text" name="naam" id="naam">
+
+                    <label for="achternaam">Achternaam</label>
+                    <input type="text" name="achternaam" id="achternaam">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+
+
+                    <label for="username">Gebruikersnaam</label>
+                    <input type="text" name="username" id="username">
+                    <button type="button" class="nsblue">Registreer</button>
+                </fieldset>
+
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>
