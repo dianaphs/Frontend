@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/modals.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
@@ -16,14 +17,14 @@
 
         <nav>
             <ul>
-                <li><a href="#.html">home</a></li>
-                <li><a href="verhalen.html">verhalen</a></li>
-                <li><a href="#.html">over ons</a></li>
-                <li><a href="login.html" class="current">inloggen</a></li>
+                <li><a href="#.html">Home</a></li>
+                <li><a href="verhalen.html">Verhalen</a></li>
+                <li><a href="#.html">Over ons</a></li>
+                <li><a href="login.html" class="current">Inloggen</a></li>
             </ul>
         </nav>
 
-         <form>
+        <form>
             <img src="images/search.svg" alt="searchicon" class="searchicon">
             <input type="search" class="zoeken" placeholder="zoeken">
         </form>
@@ -35,12 +36,12 @@
                 <fieldset>
                     <legend>Inloggen</legend>
                     <label for="gebruikersnaam">Gebruikersnaam</label>
-                    <input type="text" name="gebruikersnaam" id="gebruikersnaam">
+                    <input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
 
                     <label for="wachtwoord">Wachtwoord</label>
-                    <input type="password" name="wachtwoord" id="wachtwoord">
+                    <input type="password" name="wachtwoord" id="wachtwoord" required>
 
-                    <button type="button" class="nsblue"> Aanmelden</button>
+                    <button type="submit" class="nsblue"> Aanmelden</button>
 
                     <a href="#" class="lees">wachtwoord vergeten</a>
                 </fieldset>
@@ -58,24 +59,38 @@
                     <legend>Ik heb nog geen account</legend>
 
                     <label for="naam">Naam</label>
-                    <input type="text" name="naam" id="naam">
+                    <input type="text" name="naam" id="naam" required>
 
                     <label for="achternaam">Achternaam</label>
-                    <input type="text" name="achternaam" id="achternaam">
+                    <input type="text" name="achternaam" id="achternaam" required>
 
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
 
 
                     <label for="username">Gebruikersnaam</label>
-                    <input type="text" name="username" id="username">
-                    <button type="button" class="nsblue">Registreer</button>
-                </fieldset>
+                    <input type="text" name="username" id="username" required>
 
+
+                    <a href="#popup">
+                        <button type="button" class="nsblue">Registreer</button>
+                    </a>
+
+                    <div class="modal" id="popup">
+                        <div class="modal-container">
+                            <h1>Bedankt voor je registratie!</h1>
+                            <p> Je ontvangt na enige tijd een e-mail met daarin een bevestigingslink om jouw account te activeren.
+                            </p>
+                            <a href="login.html">
+                <button type="button" class="nsblue2">Ok, begrepen</button></a>
+                        </div>
+                        </div>
+                </fieldset>
             </form>
         </section>
 
     </main>
+
 </body>
 
 </html>

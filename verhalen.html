@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Verhalen</title>
@@ -12,14 +13,15 @@
 <body>
 
     <header>
+
         <img src="images/ns.svg" alt="logo" class="logo">
 
         <nav>
             <ul>
-                <li><a href="#.html">home</a></li>
-                <li><a href="verhalen.html" class="current">verhalen</a></li>
-                <li><a href="#.html">over ons</a></li>
-                <li><a href="login.html">inloggen</a></li>
+                <li><a href="#.html">Home</a></li>
+                <li><a href="verhalen.html" class="current">Verhalen</a></li>
+                <li><a href="#.html">Over ons</a></li>
+                <li><a href="login.html">Inloggen</a></li>
             </ul>
         </nav>
 
@@ -27,37 +29,53 @@
             <img src="images/search.svg" alt="searchicon" class="searchicon">
             <input type="search" class="zoeken" placeholder="zoeken">
         </form>
+
     </header>
 
+    <section class="leeslijst">
 
-    <aside>
-        <section>
-            <article class="marge">
-                <h1><a href="#">Nederlandse Toneel</a></h1>
+        <article class="overzicht">
+            <div class="marge">
+                <h2><a href="tanka.html">Tanka</a></h2>
                 <button type="button" class="verwijderen" value="deleteItem"></button>
-                <p>Rond 12.00 uur stap ik uit de bus, die er letterlijk acht uur over heeft gedaan. Op het plein van Amsterdam Centraal […]</p><a href="#" class="lees"> Lees verder</a>
+                <p>Queneau’s Stijloefeningen.. Een vrouw vraagt de weg.. Ze vlucht, ‘t boek is onvindbaar..</p>
                 <progress value="92" max="100"></progress>
+            </div>
+        </article>
 
-            </article>
-
-            <article class="marge">
-                <h1><a href="#">Ongeboren</a></h1>
+        <article class="overzicht">
+            <div class="marge">
+                <h2><a href="kinderliedje.html">Kinderliedje</a></h2>
                 <button type="button" class="verwijderen" value="deleteItem"></button>
-                <p>Jij bevindt je een paar kilometer verderop in de buik van je moeder. Ik heb je gisteren gezien […]</p><a href="#" class="lees"> Lees verder</a>
+                <p>Om een boek te lenen, tiereliereliere. Om een boek te lenen, tierelierelierom. Maar hij vond..
+                </p>
                 <progress value="45" max="100"></progress>
-            </article>
+            </div>
+        </article>
 
-            <article class="marge">
-                <h1><a href="#">Letterlijk</a></h1>
+        <article class="overzicht">
+            <div class="marge">
+                <h2><a href="alzheimer.html">Alzheimer</a></h2>
                 <button type="button" class="verwijderen" value="deleteItem"></button>
-                <p>Rond 12.00 uur stap ik uit de bus, die er letterlijk acht uur over heeft gedaan. Op het plein van Amsterdam Centraal […]</p><a href="#" class="lees"> Lees verder</a>
-                <progress value="92" max="100"></progress>
-            </article>
-        </section>
-    </aside>
+                <p>Een vrouw excuseert zich. Ken ik haar? Ze heeft gitzwart haar. Krullen. Ze dansen de pierlala in de wind..</p>
+                <progress value="32" max="100"></progress>
+            </div>
+        </article>
+
+        <article class="overzicht">
+            <div class="marge">
+                <h2><a href="#">Mijn leeslijst</a></h2>
+                <p>Voeg verhalen toe aan jouw leeslijst door op het bookmark icoontje te drukken.</p>
+            </div>
+        </article>
+
+        <img src="images/arrow.svg" class="next" alt="arrow next">
+
+    </section>
 
     <main>
-        <form>
+        <form class="filter">
+
             <button type="button" class="nsyellow">00-05 min</button>
             <button type="button" class="nsyellow">05-15 min</button>
             <button type="button" class="nsyellow">15-30 min</button>
@@ -65,143 +83,190 @@
 
             <label class="sorteren">sorteren op:
                 <select name="sorteren">
-
                     <option value="test">Meest bekeken</option>
                     <option value="test">Minst bekeken</option>
                     <option value="test">Nieuwe verhalen</option>
                     <option value="test">Oudere verhalen</option>
-
                 </select>
             </label>
+
         </form>
 
         <section>
-
-            <article>
+            <article class="overzicht">
                 <img src="images/arizona.jpg" class="afbartikel" alt="wegdek arizona">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addItem"></button>
-                    <h1><a href="#">Touristische Route</a></h1>
+                    <h2><a href="#">Touristische Route</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>5 min</time>
+                        <p>5 min</p>
                     </footer>
 
-                    <p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers of P.J.H. Cuypers, daar wil ik graag van af wezen. Volgens Cuypers [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers of P.J.H. Cuypers, daar wil ik graag van af wezen. Volgens Cuypers [..]</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+            <article class="overzicht">
                 <img src="images/alzheimer.jpg" class="afbartikel" alt="alzheimer medicijnen">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addtolist"></button>
-                    <h1><a href="verhalen/regenboog.html">Alzheimer</a></h1>
+                    <h2><a href="alzheimer.html">Alzheimer</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>20 min</time>
+                        <p>20 min</p>
                     </footer>
 
-                    <p>Ik stap uit, euh… Hoe heet het? Zo’n vervoersdinges op wielen. Van de gemeente. Wit met blauw. Kom. Lijn 12. Of was het 21? Ik weet het niet. Ik stap uit en loop achter een wagentje aan [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>Ik stap uit, euh… Hoe heet het? Zo’n vervoersdinges op wielen. Van de gemeente. Wit met blauw. Kom. Lijn 12. Of was het 21? Ik weet het niet. Ik stap uit en loop achter een wagentje aan [..]</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+
+            <article class="overzicht">
                 <img src="images/omslachtig.jpg" class="afbartikel" alt="quote omslachtig">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addtolist"></button>
-                    <h1><a href="#">Enigszins aan de omslachtige kant</a></h1>
+                    <h2><a href="#">Enigszins aan de omslachtige kant</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>5 min</time>
+                        <p>5 min</p>
                     </footer>
 
-                    <p>De bus stopt, ik zoek Queneau’s Stijloefeningen Een vrouw vraagt de weg Ze vlucht, ‘t boek [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>Een autobus, eigendom van het Amsterdamse Gemeentevervoersbedrijf (hierna te noemen: GVB), zet mij en mijn gewaardeerde zoon</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+            <article class="overzicht">
                 <img src="images/leon.jpg" class="afbartikel" alt="foto van leon">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addtolist"></button>
-                    <h1><a href="#">Leon de Winter</a></h1>
+                    <h2><a href="#">Leon de Winter</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>15 min</time>
+                        <p>15 min</p>
                     </footer>
 
-                    <p>De wind en de regen deden hun verwoestende werk toen ik, met voor mij in zijn kinderwagen onze slapende zoon, onze lieve, dappere Moos, de bus uitstapte. De donkere [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>De wind en de regen deden hun verwoestende werk toen ik, met voor mij in zijn kinderwagen onze slapende zoon, onze lieve, dappere Moos, de bus uitstapte. De donkere..</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+            <article class="overzicht">
                 <img src="images/sportcom.jpg" class="afbartikel" alt="sportcommentator">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addItem"></button>
-                    <h1><a href="#">Sportcommentaar</a></h1>
+                    <h2><a href="#">Sportcommentaar</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>10 min</time>
+                        <p>10 min</p>
                     </footer>
 
-                    <p>En daar stopt lijn 21 op exact de juiste tijd op precies de juiste plek op het Stationsplein. De deuren gaat open, de spanning is te snijden. En wie komt daar als eerste uit [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>En daar stopt lijn 21 op exact de juiste tijd op precies de juiste plek op het Stationsplein. De deuren gaat open, de spanning is te snijden. En wie komt daar als eerste uit ..</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+            <article class="overzicht">
                 <img src="images/kind.jpg" class="afbartikel" alt="kind met kinderwagen">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addtolist"></button>
-                    <h1><a href="verhalen/regenboog.html">Van vader tot zoon</a></h1>
+                    <h2><a href="verhalen/regenboog.html">Van vader tot zoon</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>10 min</time>
+                        <p>10 min</p>
                     </footer>
 
-                    <p>Je ligt vredig in je wagen te slapen als ik de bus uitstap op die druilerige dag in februari van het jaar 2011. In je groene wagentje. (Daar wil je inmiddels, nu ik dit schrijf, niet meer in. Je wilt [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>Je ligt vredig in je wagen te slapen als ik de bus uitstap op die druilerige dag in februari van het jaar 2011. In je groene wagentje. (Daar wil je inmiddels, nu ik dit schrijf, niet meer in. Je wilt ..</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+            <article class="overzicht">
                 <img src="images/verwardeman.jpg" class="afbartikel" alt="verwarde man">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addtolist"></button>
-                    <h1><a href="#">De verwarde man</a></h1>
+                    <h2><a href="#">De verwarde man</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>5 min</time>
+                        <p>5 min</p>
                     </footer>
 
-                    <p>De politie heeft dinsdag 2 februari een verwarde man aangehouden. Hij was op dat moment in een babywinkel op het Bos en Lommerplein bezig babyschoentjes te kopen [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>De politie heeft dinsdag 2 februari een verwarde man aangehouden. Hij was op dat moment in een babywinkel op het Bos en Lommerplein bezig babyschoentjes te kopen ..</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
-            <article>
+            <article class="overzicht">
                 <img src="images/muziek.jpg" class="afbartikel" alt="foto van leon">
-
                 <div class="marge">
-                    <button type="button" class="toevoegen" value="addtolist"></button>
-                    <h1><a href="#">Song (je vindt nooit wat je zoekt)</a></h1>
+                    <h2><a href="#">Song (je vindt nooit wat je zoekt)</a></h2>
 
                     <footer class="info">
                         <p>Molovich</p>
                         <time>15 min</time>
                     </footer>
 
-                    <p>George Little River – Je vindt nooit wat je zoekt Je vindt nooit wat je zoekt (Muziek: George L. River, tekst: Max J. Molovich Ik stap uit de bus, samen met m’n zoon [..]</p><a href="#" class="lees">Lees meer</a>
+                    <p>George Little River – Je vindt nooit wat je zoekt Je vindt nooit wat je zoekt (Muziek: George L. River, tekst: Max J. Molovich Ik stap uit de bus, samen met m’n zoon..</p>
+
+                    <footer class="icons">
+                        <input class="share" type="checkbox" />
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+
+                        <input class="read" type="checkbox" />
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                    </footer>
                 </div>
             </article>
 
@@ -216,8 +281,9 @@
             </footer>
         </section>
 
-
     </main>
+
+
 
 </body>
 
