@@ -17,34 +17,73 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 *,*:before,*:after{box-sizing: border-box;}
 /*     EINDE BROWSER RESET */
 
+
+/*typografie*/
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+p,
+a,
+.nsblue,
+.nsyellow,
+.fbblue,
+label {
+    line-height: 1.5em;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.overzicht p {
+    margin-bottom: 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb,
+.breadcrumb a {
+    color: grey;
+}
+
+h2,
+legend {
+    font-size: 1.6em;
+    line-height: 1em;
+    color: #002C89;
+    margin: 0 0 0.4em 0;
+}
+
+a {
+    color: #002C89;
+}
+
+.lees {
+    color: #0078DA;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+.inactive {
+    color: grey;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}
+
+
 /* achtergrond */
 
-.airport {
-    background-image: url(../images/airport.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
+
+
+.sorteren {
+    margin: 1em 0 0 2em;
 }
 
 
 /* buttons */
-
-.nsyellow {
-    background-color: #FECA00;
-    border-style: none;
-    margin: 3px;
-    box-shadow: inset 0 -0.2em 0 #CFA400;
-    font-size: 1em;
-    line-height: 1.2em;
-    color: #002C89;
-    font-weight: 500;
-}
-
-.nsyellow:active,
-.nsyellow:hover {
-    background-color: #CFA400;
-    border-style: none;
-    transition: .15s ease-in-out;
-}
 
 .nsblue {
     margin: 1em 0 1em 0;
@@ -89,64 +128,8 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
     outline: none;
 }
 
-
-/* filter en sorteren */
-
-.leeslijst {
-    padding: 0 2em 2em;
-    background-color: #FECA00;
-}
-
 progress {
     width: 100%;
-}
-
-
-/* typografie */
-
-body {
-    font-family: 'Fira Sans', sans-serif;
-}
-
-p,
-a,.nsblue,
-.nsyellow,
-.fbblue {
-    font-size: 0.9em;
-    text-decoration: none;
-}
-
-.breadcrumb,
-.breadcrumb a {
-    color: grey;
-
-}
-
-h2,
-legend {
-    font-size: 1.6em;
-    line-height: 1em;
-    color: #002C89;
-    margin: 0 0 0.4em 0;
-}
-a {
-    color: #002C89;
-}
-
-.lees {
-    color: #0078DA;
-}
-
-.current {
-    text-decoration: underline;
-}
-
-.inactive {
-    color: grey;
-    margin-bottom: 1em;
-    font-size: 0.9em;
-        margin-bottom: 2em;
-
 }
 
 
@@ -170,6 +153,7 @@ header nav ul {
 
 nav {
     flex-grow: 1;
+    align-self: center;
 }
 
 li {
@@ -177,43 +161,54 @@ li {
 }
 
 .searchicon {
-    margin: -0.5em 0.5em 0 0;
+    margin: 0 0.5em 0 0;
 }
 
 
-/* main, section en article */
+/* main, section, article en footer */
 
 article {
     background-color: white;
     display: block;
 }
 
-
 main {
-    padding: 2em;
     background-color: #e6e6e9;
 }
 
-section {
+.verhalen,
+.invullen {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 1em;
+}
+
+.leeslijst {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.leeslijst {
+    background-color: #FECA00;
 }
 
 section > .overzicht {
-    margin: 1.5em 1.5em 1.5em 0;
+    margin: 1% 1% 1% 1%;
 }
 
-section > .overzicht .info  {
+section > .overzicht .info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 0.8em;
     color: grey;
-    margin: 0 0 1em;
 }
 
 .overzicht {
+    position: relative;
     box-shadow: inset 0 -0.2em 0 #c0c0c0;
 }
 
@@ -223,19 +218,163 @@ section > .overzicht .info  {
 }
 
 .marge {
-    padding: 1.5em 1.5em;
+    padding: 1.5em;
 }
 
 .pgnr {
-    padding-left: 1em;
+    text-align: right;
+    margin: 0 0 2em 2em;
+}
+
+.leeslijst .overzicht:nth-child(1) {
+    opacity: 0.5;
+    box-shadow: inset 0 -0.2em 0 #ffffff;
+    cursor: auto;
+}
+
+form {
+    display: flex;
+}
+
+.mob,
+.desk,
+.tablet {
+    width: 100%;
+}
+
+input[type="search"] {
+    padding: 0.7em;
+    border: 1px solid #c0c0c0;
+    border-radius: 1em;
+}
+
+select {
+    border-radius: 1em;
+    height: 2.5em;
+}
+
+main > footer {
+    padding: 0 4em 2em 0;
+    text-align: right;
+}
+
+
+/* icons */
+
+input[class="read"] {
+    position: relative;
+    transform: scale(3);
+    left: 2.2em;
+    opacity: 0;
+}
+
+label[for="read"] {
+    color: #aab8c2;
+    right: 2em;
+    font-size: 1em;
+    transition: color 0.2s ease-in-out;
+}
+
+label[for="read"]:hover {
+    color: grey;
+}
+
+input[class="read"]:checked + label {
+    color: #e2264d;
+}
+
+input[class="share"] {
+    opacity: 0;
+}
+
+label[for="share"] {
+    color: #aab8c2;
+    font-size: 1em;
+    transition: color 0.2s ease-in-out;
+}
+
+
+/* filter */
+
+.uitklap ul li h2 {
+    font-size: 1.1em;
+}
+
+.uitklap ul li input[type="checkbox"] {
+    margin-right: 1em;
+}
+
+
+.filter-container h3 {
+    font-size: 1em;
+    padding: 0.7em 0 0.7em 2em;
+    color: white;
+    background-color: #0078DA;
+}
+
+.filter-container {
+    background-color: #FFFFFF;
+}
+
+.filter-element aside {
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-element aside:after {
+    position: absolute;
+    top: calc(50% - .50rem);
+    right: 2.6em;
+    content: "\25BC";
+    color: #ffffff;
+    font-size: 0.7em;
+    /* utf-8 code driehoek omlaag*/
+    transition: .3s;
+}
+
+.filter-element aside.close-icon:after {
+    transform: rotate(-90deg);
+}
+
+.filter-element .uitklap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.filter-element aside.close-icon + .uitklap {
+    max-height: 80em;
+}
+
+.uitklap ul {
+    margin: 2em 0 2em 2em;
+    list-style-type: none;
+}
+
+.icons {
+    position: absolute;
+    bottom: 0;
+    right: 1.5em;
+    margin-bottom: 1em;
 }
 
 
 /* registreren */
 
 .airport > section {
-    margin-top: 5.8em;
     justify-content: center;
+    margin: -0.1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0.7em;
+    border: 1px solid #c0c0c0;
+}
+
+label[for=mail] {
+    margin-top: 2.1em;
 }
 
 .inloggen,
@@ -246,9 +385,9 @@ section > .overzicht .info  {
 .inloggen,
 .registreren {
     width: 30em;
-    margin-right: 2em;
-    padding: 2em;
-    background: rgba(255, 255, 255, 0.9);
+    margin-top: 6em;
+    padding: 2em 2em 0 2em;
+    background: white;
 }
 
 .inloggen > fieldset {
@@ -269,195 +408,13 @@ fieldset {
 
 .registreren input,
 .inloggen input {
-    height: 2em;
     width: 100%;
     margin-bottom: 1em;
+    border-radius: 0.5em;
 }
 
 
-/* zoeken, filteren, sorteren en inloggen*/
-
-form {
-    display: flex;
-}
-
-
-.mob, .desk, .tablet {
-    width: 100%;
-    margin-bottom: -1em;
-}
-
-/* media queries mobiel */
-
-@media (max-width:35em) {
-    .leeslijst > .overzicht:nth-child(3) {
-        display: none;
-    }
-    .leeslijst > .overzicht:nth-child(2) {
-        display: none;
-    }
-    .leeslijst > .overzicht:nth-child(4) {
-        display: none;
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-    }
-    .overzicht {
-        width: 100%;
-    }
-    .zoeken {
-        margin-top: 1em;
-        width: 100%;
-    }
-    .sorteren {
-        display: none;
-    }
-    .nsyellow {
-        width: 21.5%;
-        height: 60px;
-    }
-    .searchicon {
-        display: none;
-    }
-    .logo {
-        margin-bottom: 1em;
-    }
-    .next {
-        position: absolute;
-        right: 1em;
-        top: 16.5em;
-    }
-    .desk {
-        display: none;
-    }
-    .tablet {
-        display: none;
-    }
-    .breadcrumb {
-        margin-bottom: 1em;
-    }
-
-}
-
-@media (min-width:35em) {
-    .overzicht {
-        width: 45%;
-    }
-    .sorteren {
-        margin-left: auto;
-        padding: 1em;
-        margin-right: 1em;
-    }
-    .nsyellow {
-        width: 73px;
-        height: 60px;
-    }
-    .next {
-        display: none;
-    }
-       .mob {
-        display: none;
-    }
-
-}
-
-@media (max-width:60em) {
-    .leeslijst > .overzicht:nth-child(3) {
-        display: none;
-    }
-    .leeslijst > .overzicht:nth-child(4) {
-        display: none;
-    }
-    .next {
-        display: inline;
-    }
-        .desk {
-        display: none;
-    }
-}
-
-
-/* media queries tablet */
-
-@media (min-width:60em) {
-    .overzicht {
-        width: 30%;
-    }
-    .leeslijst > .overzicht:nth-child(3) {
-        display: none;
-    }
-    .tablet {
-        display: none;
-    }
-
-
-
-
-}
-
-
-/* media queries desktop */
-
-@media (min-width:80em) {
-    .overzicht {
-        width: 23%;
-    }
-    .leeslijst > .overzicht:nth-child(3) {
-        display: inline;
-    }
-
-
-}
-
-
-/* microinteracties */
-
-.verwijderen {
-    margin-top: 1em;
-    float: right;
-    display: block;
-    margin-left: 1.5em;
-    width: 25px;
-    height: 20px;
-    background-image: url(../images/eye-black.svg);
-    background-repeat: no-repeat;
-    background-color: white;
-    border-style: none;
-}
-
-.verwijderen {
-    background-image: url(../images/close.svg);
-    margin: -3em -1em 0 0;
-}
-
-.verwijderen:active {
-    background-image: url(../images/close-yellow.svg);
-    transition: 0s;
-}
-
-.overzicht:hover,
-.overzicht:active {
-    box-shadow: inset 0 -0.2em 0 #005BA5;
-    transition: .2s ease-in-out;
-    cursor: pointer;
-}
-
-
-
-.icons {
-    margin-top: 1em;
-    text-align: right
-}
-
-.marge:nth-child(4) {
-    opacity: 0.5;
-}
-
-.marge:nth-child(4):hover {
-    box-shadow: inset 0 -0.2em 0 #c0c0c0;
-}
+/* verhaal */
 
 .verhaal {
     padding: 0 10% 0 10%;
@@ -475,67 +432,14 @@ form {
     cursor: auto;
 }
 
-
-[class="read"] {
-  position: absolute;
-  left: 1;
-    opacity: 0;
-}
-
-[for="read"] {
-  color: #aab8c2;
-  cursor: pointer;
-  font-size: 1em;
-  transition: color 0.2s ease-in-out;
-
-}
-
-[for="read"]:hover {
-  color: grey;
-
-}
-
-[class="read"]:checked + label {
-  color: #e2264d;
-}
-
-[class="share"] {
-  position: absolute;
-  left: 1;
-    opacity: 0;
-}
-
-[for="share"] {
-  color: #aab8c2;
-  cursor: pointer;
-  font-size: 1em;
-  transition: color 0.2s ease-in-out;
-    padding-right: 1em;
-
-}
-
-.leeslijst .overzicht:nth-child(4) {
-    opacity: 0.5;
-        box-shadow: inset 0 -0.2em 0 #ffffff;
-
-}
-.leeslijst .overzicht:nth-child(4):hover {
-        box-shadow: inset 0 -0.2em 0 #ffffff;
-}
-
-
-.read {
-    margin-right: 10em;
-}
-
 .tanka nav ul {
     display: flex;
     flex-direction: row;
-        justify-content: flex-end;
-
+    justify-content: flex-end;
 }
 
-.tanka nav ul li:nth-child(2):before,.tanka nav ul li:nth-child(3):before {
+.tanka nav ul li:nth-child(2):before,
+.tanka nav ul li:nth-child(3):before {
     content: '>';
     padding-right: 0.5em;
 }
@@ -551,7 +455,190 @@ textarea {
     padding: 1em;
 }
 
-.reacties {
-    margin-left:
+
+/* media queries mobiel */
+
+@media (max-width:35em) {
+    .leeslijst > .overzicht:nth-child(3) {
+        display: none;
+    }
+    .leeslijst > .overzicht:nth-child(2) {
+        display: none;
+    }
+    .leeslijst > .overzicht:nth-child(4) {
+        display: none;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .overzicht {
+        width: 100%;
+    }
+    .zoeken {
+        margin-top: 1em;
+        width: 100%;
+    }
+    .nsyellow {
+        width: 21.5%;
+        height: 60px;
+    }
+
+    .logo {
+        margin-bottom: 1em;
+    }
+    .next {
+        position: absolute;
+        right: 1em;
+        top: 16.5em;
+    }
+    select {
+        width: 23em;
+    }
+    .desk {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+    .breadcrumb {
+        margin-bottom: 1em;
+    }
+    .invullen {
+        padding: 2em;
+    }
 }
 
+@media (min-width:35em) {
+    .overzicht {
+        width: 48%;
+    }
+    .nsyellow {
+        width: 73px;
+        height: 60px;
+    }
+    .next {
+        display: none;
+    }
+    .mob {
+        display: none;
+    }
+    input[type="search"] {
+        width: 20em;
+    }
+    select {
+        width: 20.5em;
+    }
+}
+
+@media (max-width:60em) {
+    .leeslijst > .overzicht:nth-child(3) {
+        display: none;
+    }
+    .leeslijst > .overzicht:nth-child(4) {
+        display: none;
+    }
+    .next {
+        display: inline;
+    }
+    .desk {
+        display: none;
+    }
+}
+
+
+/* media queries tablet */
+
+@media (min-width:60em) {
+    .overzicht {
+        width: 31.3%;
+    }
+    .leeslijst > .overzicht:nth-child(3) {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+    .uitklap {
+        display: flex;
+    }
+    input[type="search"] {
+        padding: 0.7em;
+        border: 1px solid #c0c0c0;
+        border-radius: 0.5em;
+    }
+    .airport {
+        height: 100vh;
+    }
+}
+
+
+/* media queries desktop */
+
+@media (min-width:80em) {
+    .overzicht {
+        width: 23%;
+    }
+    .leeslijst > .overzicht:nth-child(3) {
+        display: inline;
+    }
+    .uitklap {
+        display: flex;
+    }
+    .filter-container {
+        background-color: #FFFFFF;
+    }
+    .airport {
+        height: 100vh;
+    }
+    /* microinteracties */
+    .verwijderen {
+        margin-top: 1em;
+        float: right;
+        display: block;
+        margin-left: 1.5em;
+        width: 25px;
+        height: 20px;
+        background-image: url(../images/eye-black.svg);
+        background-repeat: no-repeat;
+        background-color: white;
+        border-style: none;
+    }
+    .verwijderen {
+        background-image: url(../images/close.svg);
+        margin: -3em -1em 0 0;
+    }
+    .verwijderen:active {
+        background-image: url(../images/close-yellow.svg);
+        transition: 0s;
+    }
+    .overzicht:hover,
+    .overzicht:active {
+        box-shadow: inset 0 -0.2em 0 #005BA5;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+    }
+    .marge:nth-child(4) {
+        opacity: 0.5;
+    }
+    .marge:nth-child(4):hover {
+        box-shadow: inset 0 -0.2em 0 #c0c0c0;
+    }
+    [placeholder]:focus::-webkit-input-placeholder {
+        transition: all 0.4s ease-in-out;
+        transform: translate(30em, 0);
+        opacity: 0;
+        display: none;
+    }
+
+    /* Inputs */
+    .login-input {
+        box-sizing: border-box;
+        font-weight: 500;
+        opacity: 1;
+    }
+    .login-input:focus {
+        outline: none;
+        border: 1px solid #FECA00;
+    }
+}

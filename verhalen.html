@@ -6,14 +6,13 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <script src="js/filter.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Verhalen</title>
 </head>
 
 <body>
-
     <header>
-
         <img src="images/ns.svg" alt="logo" class="logo">
 
         <nav>
@@ -27,12 +26,17 @@
 
         <form>
             <img src="images/search.svg" alt="searchicon" class="searchicon">
-            <input type="search" class="zoeken" placeholder="zoeken">
+            <input type="search" class="zoeken" placeholder="Waar ben je naar op zoek?">
         </form>
-
     </header>
 
     <section class="leeslijst">
+        <article class="overzicht">
+            <div class="marge">
+                <h2><a href="#">Mijn leeslijst</a></h2>
+                <p>Voeg verhalen toe aan jouw leeslijst door op het bookmark icoontje te drukken.</p>
+            </div>
+        </article>
 
         <article class="overzicht">
             <div class="marge">
@@ -62,37 +66,137 @@
             </div>
         </article>
 
-        <article class="overzicht">
-            <div class="marge">
-                <h2><a href="#">Mijn leeslijst</a></h2>
-                <p>Voeg verhalen toe aan jouw leeslijst door op het bookmark icoontje te drukken.</p>
-            </div>
-        </article>
-
-        <img src="images/arrow.svg" class="next" alt="arrow next">
-
     </section>
 
     <main>
-        <form class="filter">
+        <div class="filter-container">
+            <section class="filter-element">
+                <aside>
+                    <h3>Filteren</h3>
+                </aside>
+                <div class="uitklap">
 
-            <button type="button" class="nsyellow">00-05 min</button>
-            <button type="button" class="nsyellow">05-15 min</button>
-            <button type="button" class="nsyellow">15-30 min</button>
-            <button type="button" class="nsyellow">30 min +</button>
+                    <ul>
+                        <li>
+                            <h2>Leesduur</h2></li>
+                        <li>
+                            <input type="checkbox" name="nul" id="nul" required>
+                            <label for="nul">0-15 min</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="een" id="een" required>
+                            <label for="een">15-30 min</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="twee" id="twee" required>
+                            <label for="twee">30-60 min</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="drie" id="drie" required>
+                            <label for="drie">60+ min</label>
+                        </li>
+                    </ul>
 
-            <label class="sorteren">sorteren op:
+                    <ul>
+                        <li>
+                            <h2>Thema</h2></li>
+                        <li>
+                            <input type="checkbox" name="fantasie" id="fantasie" required>
+                            <label for="fantasie">Fantasie</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="hobby" id="hobby" required>
+                            <label for="hobby">Hobby</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="media" id="media" required>
+                            <label for="media">Media</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="reizen" id="reizen" required>
+                            <label for="reizen">Reizen</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="spanning" id="spanning" required>
+                            <label for="spanning">Spanning</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="stripverhaal" id="stripverhaal" required>
+                            <label for="stripverhaal">Stripverhaal</label>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <h2>Leeftijdscategorie</h2></li>
+                        <li>
+                            <input type="checkbox" name="kinderen" id="kinderen" required>
+                            <label for="kinderen">Kinderen</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="young" id="young" required>
+                            <label for="young">Young Adult</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="volwassenen" id="volwassenen" required>
+                            <label for="volwassenen">Volwassenen</label>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <h2>Aanraders</h2></li>
+                        <li>
+                            <input type="checkbox" name="nieuw" id="nieuw" required>
+                            <label for="nieuw">Nieuw</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="top" id="top" required>
+                            <label for="top">NS top 10</label>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <h2>Verschijningsjaar</h2></li>
+                        <li>
+                            <input type="checkbox" name="2016" id="2016" required>
+                            <label for="2016">2016</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="2015" id="2015" required>
+                            <label for="2015">2015</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="2014" id="2014" required>
+                            <label for="2014">2014</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="2013" id="2013" required>
+                            <label for="2013">2013</label>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="sorteren">
+
+            <label>Sorteren op:
                 <select name="sorteren">
                     <option value="test">Meest bekeken</option>
                     <option value="test">Minst bekeken</option>
-                    <option value="test">Nieuwe verhalen</option>
-                    <option value="test">Oudere verhalen</option>
+                    <option value="test">Leesduur lang - kort</option>
+                    <option value="test">Leesduur lang - kort</option>
+                    <option value="test">Titel A - Z</option>
+                    <option value="test">Titel Z - A</option>
+
+
                 </select>
             </label>
+        </div>
 
-        </form>
-
-        <section>
+        <section class="verhalen">
             <article class="overzicht">
                 <img src="images/arizona.jpg" class="afbartikel" alt="wegdek arizona">
                 <div class="marge">
@@ -102,15 +206,14 @@
                         <p>Molovich</p>
                         <p>5 min</p>
                     </footer>
-
                     <p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers of P.J.H. Cuypers, daar wil ik graag van af wezen. Volgens Cuypers [..]</p>
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 92 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 323 </label>
                     </footer>
                 </div>
             </article>
@@ -129,14 +232,13 @@
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 83 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 304 </label>
                     </footer>
                 </div>
             </article>
-
 
             <article class="overzicht">
                 <img src="images/omslachtig.jpg" class="afbartikel" alt="quote omslachtig">
@@ -152,10 +254,10 @@
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 49 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 287 </label>
                     </footer>
                 </div>
             </article>
@@ -174,10 +276,10 @@
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 43 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 234 </label>
                     </footer>
                 </div>
             </article>
@@ -196,7 +298,7 @@
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 35 </label>
 
                         <input class="read" type="checkbox" />
                         <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
@@ -218,10 +320,10 @@
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 49 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 159 </label>
                     </footer>
                 </div>
             </article>
@@ -240,10 +342,10 @@
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 33 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 147 </label>
                     </footer>
                 </div>
             </article>
@@ -255,35 +357,33 @@
 
                     <footer class="info">
                         <p>Molovich</p>
-                        <time>15 min</time>
+                        <p>15 min</p>
                     </footer>
 
-                    <p>George Little River – Je vindt nooit wat je zoekt Je vindt nooit wat je zoekt (Muziek: George L. River, tekst: Max J. Molovich Ik stap uit de bus, samen met m’n zoon..</p>
+                    <p>George Little River – Je vindt nooit wat je zoekt Je vindt nooit wat je zoekt (Muziek: George L. River, tekst: Max J. Molovich Ik stap uit de bus..</p>
 
                     <footer class="icons">
                         <input class="share" type="checkbox" />
-                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 23 </label>
+                        <label for="share"><i class="fa fa-comment" aria-hidden="true"></i> 21 </label>
 
                         <input class="read" type="checkbox" />
-                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 194 </label>
+                        <label for="read"><i class="fa fa-bookmark" aria-hidden="true"></i> 144 </label>
                     </footer>
                 </div>
             </article>
 
-            <footer>
-                <a href="#" class="pgnr">1</a>
-                <a href="#" class="pgnr">2</a>
-                <a href="#" class="pgnr">3</a>
-                <a href="#" class="pgnr">4</a>
-                <a href="#" class="pgnr">5</a>
-                <a href="#" class="pgnr">...</a>
-                <a href="#" class="pgnr">11</a>
-            </footer>
+
         </section>
-
+        <footer>
+            <a href="#" class="pgnr">1</a>
+            <a href="#" class="pgnr">2</a>
+            <a href="#" class="pgnr">3</a>
+            <a href="#" class="pgnr">4</a>
+            <a href="#" class="pgnr">5</a>
+            <a href="#" class="pgnr">...</a>
+            <a href="#" class="pgnr">11</a>
+        </footer>
     </main>
-
-
 
 </body>
 

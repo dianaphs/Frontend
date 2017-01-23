@@ -26,29 +26,33 @@
 
         <form>
             <img src="images/search.svg" alt="searchicon" class="searchicon">
-            <input type="search" class="zoeken" placeholder="zoeken">
+            <input type="search" class="zoeken" placeholder="Waar ben je naar op zoek?">
         </form>
     </header>
 
     <main class="airport">
-        <section>
+        <section class="invullen">
             <form class="inloggen">
                 <fieldset>
                     <legend>Inloggen</legend>
-                    <label for="gebruikersnaam">Gebruikersnaam</label>
-                    <input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
+                     <label for="username">Gebruikersnaam</label>
+                    <input type="text" class="login-input" name="username" id="username" required>
 
-                    <label for="wachtwoord">Wachtwoord</label>
-                    <input type="password" name="wachtwoord" id="wachtwoord" required>
+                     <label for="password">Wachtwoord</label>
+                    <input type="password" class="login-input" name="password" id="password" required>
 
-                    <button type="submit" class="nsblue"> Aanmelden</button>
+                    <a href="#">
+                        <button type="submit" class="nsblue"> Aanmelden</button>
+                    </a>
 
-                    <a href="#" class="lees">wachtwoord vergeten</a>
+                    <a href="#" class="lees">Wachtwoord vergeten</a>
                 </fieldset>
 
                 <fieldset>
                     <legend>Inloggen via Facebook</legend>
-                    <button type="button" class="fbblue"> Aanmelden via fb</button>
+                    <a href="#">
+                        <button type="button" class="fbblue"> Aanmelden via fb</button>
+                    </a>
                 </fieldset>
 
 
@@ -58,19 +62,17 @@
                 <fieldset>
                     <legend>Ik heb nog geen account</legend>
 
-                    <label for="naam">Naam</label>
-                    <input type="text" name="naam" id="naam" required>
+                    <label for="name">Naam</label>
+                    <input type="text" class="login-input" name="name" placeholder="Bv. John" id="name" required>
 
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" name="achternaam" id="achternaam" required>
+                     <label for="surname">Achternaam</label>
+                    <input type="text" class="login-input" name="surname" placeholder="Bv. Jansen" id="surname" required>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required>
+                     <label for="mail">E-mail</label>
+                    <input type="email" class="login-input" name="mail" id="mail" required>
 
-
-                    <label for="username">Gebruikersnaam</label>
-                    <input type="text" name="username" id="username" required>
-
+                     <label for="username">Gebruikersnaam</label>
+                    <input type="text" class="login-input" name="username" id="username" required>
 
                     <a href="#popup">
                         <button type="button" class="nsblue">Registreer</button>
@@ -82,11 +84,13 @@
                             <p> Je ontvangt na enige tijd een e-mail met daarin een bevestigingslink om jouw account te activeren.
                             </p>
                             <a href="login.html">
-                <button type="button" class="nsblue2">Ok, begrepen</button></a>
+                                <button type="button" class="nsblue2">Ok, begrepen</button>
+                            </a>
                         </div>
-                        </div>
+                    </div>
                 </fieldset>
             </form>
+
         </section>
 
     </main>
